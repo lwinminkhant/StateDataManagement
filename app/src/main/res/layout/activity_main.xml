@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:paddingTop="48dp"
+        android:paddingStart="24dp"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView"
+        app:srcCompat="@drawable/baseline_close_24" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:scaleType="centerCrop"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/welcome"
+        android:focusable="true" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/clouds" />
+
+    <LinearLayout
+        android:id="@+id/welcome_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/padding_large"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:elevation="10dp"
+            android:fontFamily="@font/chivo_bold"
+            android:paddingBottom="@dimen/padding_large"
+            android:text="@string/welcome_to_ready_to_travel"
+            android:textSize="32sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:elevation="10dp"
+            android:fontFamily="@font/chivo_regular"
+            android:text="@string/sign_up_with_facebook"
+            android:textSize="@dimen/text_size_medium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="20dp"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_large"
+        android:paddingBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoginFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/blue"
+            android:gravity="center"
+            android:padding="18dp"
+            android:text="@string/log_in_with_facebook"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:cornerRadius="@dimen/padding_small"
+            app:icon="@drawable/ic_facebook"
+            app:iconGravity="end" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/blue"
+            android:gravity="center"
+            android:padding="18dp"
+            android:text="@string/log_in_with_email_address"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:cornerRadius="@dimen/padding_small" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNewAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/new_account_background"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/create_a_new_account"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:backgroundTint="@null"
+            app:cornerRadius="@dimen/padding_small" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

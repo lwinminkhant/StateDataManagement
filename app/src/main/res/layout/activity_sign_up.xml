@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:background="#CDD3D3">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginStart="8dp"
+            app:srcCompat="@drawable/ic_arrow_back"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAlmostThere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnBack"
+            android:textSize="@dimen/text_size_large"
+            android:text="@string/almost_there"
+            android:padding="@dimen/padding_large"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/chivo_bold"
+            android:textColor="@color/black"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCompleteForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complete_from"
+            android:fontFamily="@font/chivo_bold"
+            android:paddingHorizontal="@dimen/padding_large"
+            android:paddingVertical="@dimen/padding_small"
+            android:layout_below="@+id/tvAlmostThere"
+            android:layout_gravity="center_vertical"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCompleteForm"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="@dimen/padding_medium"
+            android:text="*Mandatory"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/chivo_regular"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="150dp"
+            app:srcCompat="@drawable/guitar" />
+
+        <LinearLayout
+            android:id="@+id/llForm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvCompleteForm"
+            android:layout_alignParentBottom="true"
+            android:paddingHorizontal="@dimen/padding_medium"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chivo_bold"
+                android:text="First Name*"
+                android:textColor="@color/gray" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Regina"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chivo_bold"
+                android:text="Last Name*"
+                android:textColor="@color/gray" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chivo_regular"
+                android:text="Chan"
+                android:inputType="textPersonName"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chivo_bold"
+                android:text="Email Address*"
+                android:textColor="@color/gray" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chivo_regular"
+                android:text="regina@codigo.co"
+                android:inputType="textEmailAddress"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/chivo_bold"
+                        android:text="Date of Birth*"
+                        android:textColor="@color/gray" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etDateOfBirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/chivo_bold"
+                        android:text="DD/MM/YYYY"
+                        android:inputType="textPersonName"
+                        android:drawableEnd="@drawable/dob"/>
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="Female"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="Male"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chivo_bold"
+                android:text="Nationality*"
+                android:textColor="@color/gray" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etNationality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chivo_regular"
+                android:text="Singaporean"
+                android:inputType="textEmailAddress"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chivo_bold"
+                android:text="Country of Residence*"
+                android:textColor="@color/gray" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etResidence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chivo_regular"
+                android:text="Singaporean"
+                android:inputType="textEmailAddress"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countryCodePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_showFlag="false"
+                    app:ccp_defaultNameCode="US" />
+
+                <EditText
+                    android:id="@+id/mobileNumberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your mobile number"
+                    android:inputType="phone" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

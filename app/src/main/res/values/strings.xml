@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">State Data Management</string>
+    <string name="welcome_to_ready_to_travel">Welcome to \nReady  to Travel</string>
+    <string name="sign_up_with_facebook">Sign up with Facebook for the most fulfilling trip plainning experience with us!</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="log_in_with_email_address">Log in with email address</string>
+    <string name="log_in_with_facebook">Log in with Facebook</string>
+    <string name="complete_from">Complete teh from below to create your Ready To travel accournt.</string>
+    <string name="almost_there">Almost there!</string>
+</resources>
